@@ -1,0 +1,15 @@
+
+{% if name != ""%}
+<h1>Name: {{name}}</h1><br>
+
+{% if year != "" %}
+<h2>Year: {{year}}</h2><br>
+{% endif %}
+<h3>Rate: {{rate}}</h3><br>
+<hr>
+<h3>Image: </h3>
+
+<img src="{{image}}" alt="poster">
+{%else%}
+<h1>Error in The Name!</h1>
+{% endif %}

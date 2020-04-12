@@ -41,7 +41,6 @@ def scrap2(url):
     items[1]=rate
     items[2]=year
     items[3]=image
-    print(name)
 
 def scrap(url,text):
     found=False
@@ -50,7 +49,6 @@ def scrap(url,text):
     content =session.get(url,verify=False).content
     soup=BeautifulSoup(content, "html.parser")
     tables=soup.find_all('tr',{'class':'findResult'})
-    print(len(tables))
     for i in tables:
         if len(i.find_all())>2:
             link = i.find_all('a')[1]

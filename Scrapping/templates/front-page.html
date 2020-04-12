@@ -1,5 +1,54 @@
+{% load bootstrap4 %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+<head>
+  <!-- Mobile Specific Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Favicon-->
+  <link rel="shortcut icon" href="img/fav.png">
+  <!-- Author Meta -->
+  <meta name="author" content="Colorlib">
+  <!-- Meta Description -->
+  <meta name="description" content="">
+  <!-- Meta Keyword -->
+  <meta name="keywords" content="">
+  <!-- meta character set -->
+  <meta charset="UTF-8">
+  <!-- Site Title -->
+  <title>Quick ImdbSearch</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+    <!--
+    CSS
+    ============================================= -->
+
+    <link rel="stylesheet" href="{% static 'home-static/css/linearicons.css' %}">
+    <link rel="stylesheet" href="{% static 'home-static/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'home-static/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'home-static/css/nice-select.css' %}">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="{% static 'home-static/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'home-static/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'home-static/css/mystyle.css' %}">
+
+
+
+  </head>
+  <body>
+<div class="container">
+  <br><br><br><br>
+<h1 style="text-align: center;color: green;">Welcome to Imdb Fast Search</h1>
+  <br><hr><br>
+  <h3 style="text-align: center;color: blue;">Write the name of the movie here: </h3><br>
 <form method="post">
   {%csrf_token%}
-  <input type="text" name="textfield" value="">
-  <button type="submit" name="button">Search</button>
+  <input style="display: block;margin : 0 auto;" type="text" name="textfield" value="">
+  {% buttons %}
+  <br>
+  <button style="display: block;margin : 0 auto;" type="submit" name="button">Search</button>
+  {% endbuttons %}
 </form>
+</div>
+</body>
